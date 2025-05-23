@@ -19,22 +19,24 @@ public class Main {
         Actor juliet90s = new Actor("Claire Danes", "Juliet", "William Shakespeare's Romeo + Juliet", 1996);
         Actor romeo90s = new Actor("Leonardo di Caprio", "Romeo", "William Shakespeare's Romeo + Juliet", 1996);
 
-
-
-
         //juliet.setAge(99);
         System.out.println(juliet.getAge());
         System.out.println(juliet.introduce());
+        System.out.println(romeo.introduce());
         System.out.println(juliet60s.introduce());
         System.out.println(romeo90s.introduce());
 
         System.out.println(romeo.introduce());
-//        System.out.println(ladyCapulet.introduce()); Character benvolio = new Character("Benvolio", "Romeo's cousin and friend", 23);
 
         System.out.println(juliet.introduce());
-//        System.out.println(ladyCapulet.introduce());
-//        System.out.println(lordMontague.introduce());
-//        System.out.println(benvolio.introduce());
+    // apuntes --- clase abstracta = plantilla, no se puede instanciar objetos,
+        //si un metodos es abstracto la clase tiene que ser abstracta pero una clase abstracta
+        //puede tener atributos y otros metodos concretos
+
+        // interface especifica que metodos debe implementar una clase
+        //contrato entre clases
+        // los metodos son por defecto publicos y abstractos
+        // atributos - pueden tener constantes ya definidos con un valor, no puede tener instancias
 
 
 
