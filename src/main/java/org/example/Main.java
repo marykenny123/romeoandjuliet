@@ -8,35 +8,36 @@ public class Main {
     // abro 3 clases, por el momento sin encapsular para comenzar más sencillo
     public static void main(String[] args) {
 
-        Capulet juliet = new Capulet("Juliet", "la protagonista feminina.") ;
-        Capulet ladyCapulet = new Capulet("Lady Capulet", "la madre de Juliet");
-        Capulet lordCapulet = new Capulet("Lord Capulet", "el padre de Juliet");
-        Capulet tybalt = new Capulet("Tybalt Capulet", "el primo de Juliet");
-
-        Montague romeo = new Montague("Romeo", "el protagonista masculino");
-        Montague lordMontague = new Montague("Lord Montague", "el padre de Romeo");
-        Montague ladyMontague = new Montague("Lady Montague", "la madre de Romeo");
-        Montague benvolio = new Montague("Benvolio", "el primo y amigo de Romeo");
-
-        OtherCharacter nurse = new OtherCharacter("enfermera", "la enfermera de Juliet");
-        OtherCharacter monk = new OtherCharacter("Fray Lorenzo", "el fraile que casa a Romeo y Juliet.");
+        Character juliet = new Character("Juliet", "the lead female character", 13);
+        Character tybalt = new Character("Tybalt Capulet", "Juliet's cousin", 20);
+        Character romeo = new Character("Romeo", "the male lead character", 16);
+        Character benvolio = new Character("Benvolio", "Romeo's cousin and friend", 16);
 
 
-        System.out.println("***** Conocer a los Capulet! *****");
-        System.out.println(juliet.introduceCapulets());
-        System.out.println(ladyCapulet.introduceCapulets());
-        System.out.println(lordCapulet.introduceCapulets());
-        System.out.println(tybalt.introduceCapulets());
+        Actor juliet60s = new Actor("Olivia Hussey", "Juliet", "Romeo and Juliet", 1968);
+        Actor romeo60s = new Actor("Leonard Whiting", "Romeo", "Romeo and Juliet", 1968);
+        Actor juliet90s = new Actor("Claire Danes", "Juliet", "William Shakespeare's Romeo + Juliet", 1996);
+        Actor romeo90s = new Actor("Leonardo di Caprio", "Romeo", "William Shakespeare's Romeo + Juliet", 1996);
 
-        System.out.println("\n***** Conocer a los Montague! *****");
-        System.out.println(romeo.introduceMontagues());
-        System.out.println(lordMontague.introduceMontagues());
-        System.out.println(ladyMontague.introduceMontagues());
-        System.out.println(benvolio.introduceMontagues());
 
-        System.out.println("\n***** Conocer a los otros personajes! *****");
-        System.out.println(nurse.introduceOthers());
-        System.out.println(monk.introduceOthers());
+
+
+        //juliet.setAge(99);
+        System.out.println(juliet.getAge());
+        System.out.println(juliet.introduce());
+        System.out.println(juliet60s.introduce());
+        System.out.println(romeo90s.introduce());
+
+        System.out.println(romeo.introduce());
+//        System.out.println(ladyCapulet.introduce()); Character benvolio = new Character("Benvolio", "Romeo's cousin and friend", 23);
+
+        System.out.println(juliet.introduce());
+//        System.out.println(ladyCapulet.introduce());
+//        System.out.println(lordMontague.introduce());
+//        System.out.println(benvolio.introduce());
+
+
+
 
     }
 }
