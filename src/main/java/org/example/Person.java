@@ -18,7 +18,7 @@ public class Person {
     return "Hi, I'm " + this.name + ". I'm " + this.role + ".";
     }
     // si no ponemos método introduce en subclass se hereda de superclass (busca primero
-    // en subclass y si no encuentra va al superclass a buscarlo
+    // en subclass y si no encuentra va a la superclass a buscarlo)
 
     public String getName() {
         return this.name;

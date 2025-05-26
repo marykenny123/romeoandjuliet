@@ -1,7 +1,7 @@
 package org.example;
 
 final public class Actor extends Person {
-    // nota --- pongo final para que no se puede dar herencia a otra clase
+    // nota --- si ponemos pongo final no puede dar herencia a otra clase
     private String name;
     private String role;
     private String film;
@@ -19,9 +19,9 @@ final public class Actor extends Person {
 //        " and I starred in " + this.film +  ", released in " + this.filmYear + ".";
 //    }
 
-    // otra posibilidad:
+    // otra posibilidad (usando introduce del metodo introduce de la superclass y añadiendo más:
     public String introduce() {
-        return super.introduce() + " I was in " + this.film + ", released in " + this.filmYear + ". *** ejemplo concatenar";
+        return super.introduce() + " I was in " + this.film + ", released in " + this.filmYear + ". para resaltar: *** ejemplo concatenar";
     }
 
     public String getFilmName() {
