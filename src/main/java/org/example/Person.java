@@ -1,6 +1,6 @@
 package org.example;
 
-public class Person {
+public abstract class Person {
     private String name;
     private String role;
 
@@ -8,17 +8,12 @@ public class Person {
 
     }
 
-
     public Person(String name, String role) {
         this.name = name;
         this.role = role;
     }
 
-    public String introduce () {
-    return "Hi, I'm " + this.name + ". I'm " + this.role + ".";
-    }
-    // si no ponemos método introduce en subclass se hereda de superclass (busca primero
-    // en subclass y si no encuentra va al superclass a buscarlo
+    public abstract String introduce ();
 
     public String getName() {
         return this.name;

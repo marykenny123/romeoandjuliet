@@ -1,7 +1,9 @@
 package org.example;
 
-final public class Actor extends Person {
-    // nota --- pongo final para que no se puede dar herencia a otra clase
+import org.example.interfaces.Agent;
+import org.example.interfaces.DailyRoutine;
+
+public class Actor extends Person implements DailyRoutine, Agent {
     private String name;
     private String role;
     private String film;
@@ -12,16 +14,6 @@ final public class Actor extends Person {
         super(name,role);
         this.film = film;
         this.filmYear = filmYear;
-    }
-
-//    public String introduce() {
-//        return "Hi, I'm " + super.getName() + ". I played " + super.getRole() +
-//        " and I starred in " + this.film +  ", released in " + this.filmYear + ".";
-//    }
-
-    // otra posibilidad:
-    public String introduce() {
-        return super.introduce() + " I was in " + this.film + ", released in " + this.filmYear + ". *** ejemplo concatenar";
     }
 
     public String getFilmName() {
@@ -40,5 +32,34 @@ final public class Actor extends Person {
         this.filmYear = filmYear;
     }
 
+    public String introduce() {
+        return "Hi, my name is " + super.getName() + ". I played " + super.getRole() + " in the film " + this.film + " released in " + this.filmYear + ".";
+    }
 
+    @Override
+    public void wakeUp() {
+        System.out.println("I'm " + super.getName() + " and I woke up very early for filming every day.");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("I'm " + super.getName() + " and I ate my lunch with the other actors.");
+
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("I'm " + super.getName() + ". I slept very little during filming.");
+
+    }
+
+    @Override
+    public void phoneAgent() {
+        System.out.println("I'm " + super.getName() + " and I phone my agent every week.");
+    }
+
+    @Override
+    public void payAgent() {
+        System.out.println("I'm " + super.getName() + " and I pay my agent commission after each film.");
+    }
 }

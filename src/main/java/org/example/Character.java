@@ -1,6 +1,8 @@
 package org.example;
 
-public class Character extends Person {
+import org.example.interfaces.DailyRoutine;
+
+public class Character extends Person implements DailyRoutine {
     private int age; // invented age
 
 
@@ -19,5 +21,23 @@ public class Character extends Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public void wakeUp() {
+        System.out.println("I'm " + super.getName() + " and I don't get up early.");
+
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("I'm " + super.getName() + " and I eat at banquets.");
+
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("I'm " + super.getName() + "and I can sleep lots.");
+
     }
 }
