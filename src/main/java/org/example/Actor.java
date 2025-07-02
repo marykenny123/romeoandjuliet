@@ -4,8 +4,8 @@ import org.example.interfaces.Agent;
 import org.example.interfaces.DailyRoutine;
 
 public class Actor extends Person implements DailyRoutine, Agent {
-    private String name;
-    private String role;
+//    private String name;  --> no hay que poner este variable pq está ya en Character
+//    private String role;  --> no hay que poner este variable pq está ya en Character
     private String film;
     private int filmYear;
 
